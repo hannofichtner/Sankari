@@ -1,0 +1,35 @@
+{
+  "permissions": {
+    "allow": [
+      "mcp__Claude_Preview__preview_start",
+      "Bash(brew list:*)",
+      "Bash(brew install:*)",
+      "Bash(git config:*)",
+      "Bash(git add:*)",
+      "Bash(git commit:*)",
+      "Bash(git remote:*)",
+      "Bash(git push:*)",
+      "Read(//Users/macmini/.ssh/**)",
+      "Bash(ssh -T git@github.com)",
+      "Read(//opt/homebrew/bin/**)",
+      "Read(//usr/local/bin/**)",
+      "Bash(curl -sL https://github.com/cli/cli/releases/download/v2.67.0/gh_2.67.0_macOS_amd64.zip -o /tmp/gh.zip)",
+      "Bash(unzip -o /tmp/gh.zip -d /tmp/gh)",
+      "Bash(/tmp/gh/gh_2.67.0_macOS_amd64/bin/gh --version)",
+      "Bash(/tmp/gh/gh_2.67.0_macOS_amd64/bin/gh auth:*)",
+      "Bash(curl -sL https://github.com/cli/cli/releases/download/v2.67.0/gh_2.67.0_macOS_arm64.zip -o /tmp/gh_arm.zip)",
+      "Bash(unzip -o /tmp/gh_arm.zip -d /tmp/gh_arm)",
+      "Bash(/tmp/gh_arm/gh_2.67.0_macOS_arm64/bin/gh --version)",
+      "Bash(/tmp/gh_arm/gh_2.67.0_macOS_arm64/bin/gh auth:*)",
+      "Bash(/tmp/gh_arm/gh_2.67.0_macOS_arm64/bin/gh repo:*)",
+      "Bash(/tmp/gh_arm/gh_2.67.0_macOS_arm64/bin/gh api:*)",
+      "Bash(/tmp/gh_arm/gh_2.67.0_macOS_arm64/bin/gh run:*)",
+      "Bash(/tmp/gh_arm/gh_2.67.0_macOS_arm64/bin/gh workflow:*)",
+      "Bash(find /private/tmp -type f \\\\\\(-name *.png -o -name *.jpg -o -name *.jpeg -o -name *.webp \\\\\\) -newer /Users/macmini/Claude/Sankari/css/style.css)",
+      "Bash(sort -t' ' -k6,7)",
+      "Bash(cp ~/Downloads/Portraet-Jansen-1.jpg /Users/macmini/Claude/Sankari/images/fritz-jansen.jpg)",
+      "Bash(cp ~/Downloads/Portraet-Streit-2.jpg /Users/macmini/Claude/Sankari/images/uta-streit.jpg)",
+      "WebFetch(domain:hannofichtner.github.io)"
+    ]
+  }
+}
