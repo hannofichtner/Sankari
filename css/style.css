@@ -684,11 +684,14 @@ p {
 .team-card__photo {
   width: 140px;
   height: 140px;
+  min-width: 140px;
+  min-height: 140px;
   border-radius: 50%;
   object-fit: cover;
   object-position: center top;
   margin: 0 auto 1.25rem;
   border: 3px solid var(--accent-light);
+  display: block;
 }
 
 .team-card h3 {
