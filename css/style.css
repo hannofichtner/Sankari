@@ -759,7 +759,7 @@ p {
 }
 
 .footer__brand span {
-  color: var(--accent);
+  color: var(--primary-light);
 }
 
 .footer__desc {
