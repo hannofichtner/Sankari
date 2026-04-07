@@ -241,14 +241,7 @@ p {
 }
 
 .hero::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 120px;
-  background: linear-gradient(to top, var(--bg), transparent);
-  pointer-events: none;
+  display: none;
 }
 
 .hero .container {
@@ -264,29 +257,30 @@ p {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  background: rgba(255,255,255,0.12);
-  border: 1px solid rgba(255,255,255,0.2);
+  background: rgba(0,0,0,0.08);
+  border: 1px solid rgba(0,0,0,0.12);
   padding: 0.4rem 1rem;
   border-radius: 50px;
   font-size: 0.85rem;
   font-weight: 500;
   margin-bottom: 1.5rem;
-  backdrop-filter: blur(5px);
+  color: var(--primary-dark);
 }
 
 .hero h1 {
-  color: var(--white);
+  color: var(--primary-dark);
   font-size: 3.25rem;
   line-height: 1.2;
   margin-bottom: 1.25rem;
 }
 
 .hero p {
-  color: rgba(255,255,255,0.85);
+  color: var(--primary-dark);
   font-size: 1.2rem;
   line-height: 1.7;
   margin-bottom: 2rem;
   max-width: 560px;
+  opacity: 0.85;
 }
 
 .hero__actions {
@@ -300,18 +294,19 @@ p {
   gap: 3rem;
   margin-top: 4rem;
   padding-top: 2.5rem;
-  border-top: 1px solid rgba(255,255,255,0.15);
+  border-top: 1px solid rgba(0,0,0,0.1);
 }
 
 .hero__stat h3 {
-  color: var(--white);
+  color: var(--primary-dark);
   font-size: 2.25rem;
   font-weight: 800;
 }
 
 .hero__stat p {
   font-size: 0.9rem;
-  color: rgba(255,255,255,0.7);
+  color: var(--primary-dark);
+  opacity: 0.7;
   margin: 0;
 }
 
