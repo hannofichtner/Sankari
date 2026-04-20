@@ -175,14 +175,23 @@ p {
 }
 
 .nav__logo-usa {
+  display: inline-flex;
+  align-items: center;
   font-size: 0.7rem;
   font-weight: 700;
   color: var(--accent);
   letter-spacing: 1px;
-  margin-left: 0.25rem;
-  padding: 0.15rem 0.4rem;
+  margin-left: 0.4rem;
+  padding: 0.2rem 0.45rem;
   background: var(--accent-light);
   border-radius: 3px;
+  line-height: 1;
+  vertical-align: middle;
+}
+
+.footer__brand .nav__logo-usa {
+  color: var(--primary);
+  background: rgba(255,255,255,0.12);
 }
 
 .nav__links {
@@ -643,24 +652,26 @@ p {
   content: '';
   position: absolute;
   left: 0;
-  top: 0.85rem;
-  width: 18px;
-  height: 18px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
   background: var(--accent-light);
   border-radius: 50%;
   border: 2px solid var(--accent);
+  box-sizing: border-box;
 }
 
 .check-list li::after {
   content: '';
   position: absolute;
-  left: 4px;
-  top: 0.95rem;
+  left: 5px;
+  top: 50%;
   width: 10px;
   height: 5px;
   border-left: 2px solid var(--accent);
   border-bottom: 2px solid var(--accent);
-  transform: rotate(-45deg);
+  transform: translateY(-80%) rotate(-45deg);
 }
 
 /* === TEAM === */
