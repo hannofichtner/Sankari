@@ -865,72 +865,37 @@ p {
   text-decoration: underline;
 }
 
-/* === WORLD MAP === */
-.world-map {
-  position: relative;
-  max-width: 1000px;
-  margin: 2rem auto 0;
-  aspect-ratio: 1743 / 857;
-  background: linear-gradient(135deg, #1F6FA5 0%, #2E86C1 100%);
-  border-radius: var(--radius-lg);
+/* === HERO BACKGROUND WORLD MAP === */
+.hero__map {
+  position: absolute;
+  inset: 0;
   overflow: hidden;
-  box-shadow: 0 10px 40px rgba(46,134,193,0.22);
-}
-
-.world-map__img {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  display: block;
-  opacity: 1;
-  animation: worldDrift 40s ease-in-out infinite alternate;
-  transform-origin: center;
-}
-
-@keyframes worldDrift {
-  0%   { transform: scale(1.02) translateX(-1.5%); }
-  100% { transform: scale(1.06) translateX(1.5%); }
-}
-
-.world-map__pins {
-  position: absolute;
-  inset: 0;
+  z-index: 0;
   pointer-events: none;
 }
 
-.world-map__pin {
+.hero__map-img {
   position: absolute;
-  width: 14px;
-  height: 14px;
-  margin: -7px 0 0 -7px;
-  border-radius: 50%;
-  background: var(--primary);
-  box-shadow: 0 0 0 3px rgba(240,195,0,0.25), 0 2px 6px rgba(0,0,0,0.25);
+  top: -25%;
+  left: -25%;
+  width: 150%;
+  max-width: none;
+  height: 150%;
+  object-fit: cover;
+  filter: blur(2px);
+  opacity: 0.55;
+  animation: heroMapDrift 60s ease-in-out infinite alternate;
+  transform-origin: center;
+  will-change: transform;
 }
 
-.world-map__pin::before {
-  content: '';
-  position: absolute;
-  inset: -3px;
-  border-radius: 50%;
-  border: 2px solid var(--primary);
-  animation: worldPulse 2.6s ease-out infinite;
-  opacity: 0;
+@keyframes heroMapDrift {
+  0%   { transform: scale(1.00) translateX(-2%) translateY(-1%); }
+  100% { transform: scale(1.08) translateX(2%)  translateY(1%);  }
 }
 
-.world-map__pin:nth-child(2)::before { animation-delay: 0.3s; }
-.world-map__pin:nth-child(3)::before { animation-delay: 0.6s; }
-.world-map__pin:nth-child(4)::before { animation-delay: 0.9s; }
-.world-map__pin:nth-child(5)::before { animation-delay: 1.2s; }
-.world-map__pin:nth-child(6)::before { animation-delay: 1.5s; }
-.world-map__pin:nth-child(7)::before { animation-delay: 1.8s; }
-.world-map__pin:nth-child(8)::before { animation-delay: 2.1s; }
-
-@keyframes worldPulse {
-  0%   { transform: scale(1);   opacity: 0.9; }
-  100% { transform: scale(3.5); opacity: 0; }
-}
+/* Keep hero content above the map */
+.hero .container { position: relative; z-index: 1; }
 
 /* === FORM === */
 .form {
