@@ -865,7 +865,7 @@ p {
   text-decoration: underline;
 }
 
-/* === HERO BACKGROUND WORLD MAP === */
+/* === HERO BACKGROUND WORLD MAP (seamless scroll, like intint.org) === */
 .hero__map {
   position: absolute;
   inset: 0;
@@ -874,28 +874,48 @@ p {
   pointer-events: none;
 }
 
-.hero__map-img {
+.hero__map-track {
   position: absolute;
-  top: -25%;
-  left: -25%;
-  width: 150%;
-  max-width: none;
-  height: 150%;
-  object-fit: cover;
-  filter: blur(2px);
-  opacity: 0.55;
-  animation: heroMapDrift 60s ease-in-out infinite alternate;
-  transform-origin: center;
+  top: 0;
+  left: 0;
+  height: 100%;
+  display: flex;
+  animation: heroMapScroll 90s linear infinite;
   will-change: transform;
 }
 
-@keyframes heroMapDrift {
-  0%   { transform: scale(1.00) translateX(-2%) translateY(-1%); }
-  100% { transform: scale(1.08) translateX(2%)  translateY(1%);  }
+.hero__map-img {
+  height: 100%;
+  width: auto;
+  max-width: none;
+  flex-shrink: 0;
+  opacity: 0.55;
+  filter: blur(2px);
+  display: block;
+}
+
+/* Translate by exactly one image width so the second copy lines up seamlessly with the first, then loop */
+@keyframes heroMapScroll {
+  from { transform: translate3d(0, 0, 0); }
+  to   { transform: translate3d(-50%, 0, 0); }
 }
 
 /* Keep hero content above the map */
 .hero .container { position: relative; z-index: 1; }
+
+/* Keep IntraAct USA + Evidence-Based Literacy System pill vertically aligned on one line */
+.hero__top-row {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  flex-wrap: wrap;
+  margin-bottom: 1.5rem;
+}
+
+.hero__top-row .hero__wordmark,
+.hero__top-row .hero__label {
+  margin-bottom: 0;
+}
 
 /* === FORM === */
 .form {
