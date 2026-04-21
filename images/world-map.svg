@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 500" role="img" aria-label="World map showing IntraAct global reach across Germany, Latin America, India, and Africa">
+  <defs>
+    <pattern id="dots" x="0" y="0" width="10" height="10" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1.1" fill="#2E86C1" opacity="0.55"/>
+    </pattern>
+    <filter id="glow" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <g id="continents">
+    <!-- North America -->
+    <path d="M150 120 L185 85 L245 75 L300 90 L330 120 L340 160 L325 195 L300 220 L265 240 L230 265 L200 270 L175 245 L160 210 L148 170 Z" fill="url(#dots)"/>
+    <!-- Central America -->
+    <path d="M230 255 L260 260 L275 285 L255 300 L235 290 Z" fill="url(#dots)"/>
+    <!-- South America -->
+    <path d="M285 285 L330 290 L355 335 L350 395 L325 445 L300 465 L280 440 L270 380 L272 325 Z" fill="url(#dots)"/>
+    <!-- Greenland -->
+    <path d="M380 80 L430 75 L445 115 L420 150 L390 145 L375 110 Z" fill="url(#dots)"/>
+    <!-- Europe -->
+    <path d="M470 120 L500 105 L545 108 L585 120 L595 150 L575 180 L540 190 L500 185 L475 165 L465 140 Z" fill="url(#dots)"/>
+    <!-- Africa -->
+    <path d="M500 205 L575 205 L600 240 L605 290 L580 345 L555 395 L520 415 L495 395 L480 340 L478 275 L488 230 Z" fill="url(#dots)"/>
+    <!-- Arabian Peninsula -->
+    <path d="M600 215 L635 225 L640 265 L615 280 L600 255 Z" fill="url(#dots)"/>
+    <!-- Asia (main mass) -->
+    <path d="M595 125 L670 105 L760 100 L835 115 L870 140 L875 185 L850 220 L800 245 L740 250 L680 245 L630 225 L605 195 L595 160 Z" fill="url(#dots)"/>
+    <!-- India -->
+    <path d="M680 250 L720 255 L730 295 L710 325 L690 310 L680 280 Z" fill="url(#dots)"/>
+    <!-- Southeast Asia -->
+    <path d="M790 250 L830 260 L845 290 L820 300 L795 285 Z" fill="url(#dots)"/>
+    <!-- Indonesia / Philippines (cluster of small islands as dots) -->
+    <circle cx="830" cy="305" r="6" fill="url(#dots)"/>
+    <circle cx="850" cy="315" r="5" fill="url(#dots)"/>
+    <circle cx="870" cy="300" r="5" fill="url(#dots)"/>
+    <!-- Australia -->
+    <path d="M805 350 L875 355 L885 390 L855 410 L815 405 L795 380 Z" fill="url(#dots)"/>
+    <!-- New Zealand -->
+    <circle cx="905" cy="415" r="4" fill="url(#dots)"/>
+    <circle cx="912" cy="425" r="3" fill="url(#dots)"/>
+    <!-- UK / Ireland -->
+    <circle cx="460" cy="130" r="5" fill="url(#dots)"/>
+    <circle cx="448" cy="140" r="4" fill="url(#dots)"/>
+    <!-- Japan -->
+    <circle cx="870" cy="170" r="4" fill="url(#dots)"/>
+    <circle cx="880" cy="180" r="3" fill="url(#dots)"/>
+    <!-- Madagascar -->
+    <path d="M615 360 L625 360 L625 395 L615 400 Z" fill="url(#dots)"/>
+  </g>
+
+  <!-- Reach markers -->
+  <g id="markers" filter="url(#glow)">
+    <!-- Germany -->
+    <g transform="translate(525,145)">
+      <circle r="14" fill="#F0C300" opacity="0.25"/>
+      <circle r="7" fill="#F0C300"/>
+      <circle r="3" fill="#1A1A2E"/>
+    </g>
+    <!-- Latin America (central, Colombia/Peru) -->
+    <g transform="translate(300,335)">
+      <circle r="14" fill="#F0C300" opacity="0.25"/>
+      <circle r="7" fill="#F0C300"/>
+      <circle r="3" fill="#1A1A2E"/>
+    </g>
+    <!-- India -->
+    <g transform="translate(700,285)">
+      <circle r="14" fill="#F0C300" opacity="0.25"/>
+      <circle r="7" fill="#F0C300"/>
+      <circle r="3" fill="#1A1A2E"/>
+    </g>
+    <!-- Africa (central/east) -->
+    <g transform="translate(555,315)">
+      <circle r="14" fill="#F0C300" opacity="0.25"/>
+      <circle r="7" fill="#F0C300"/>
+      <circle r="3" fill="#1A1A2E"/>
+    </g>
+  </g>
+</svg>

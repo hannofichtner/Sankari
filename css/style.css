@@ -279,6 +279,30 @@ p {
   max-width: 680px;
 }
 
+.hero__wordmark {
+  font-size: 3.5rem;
+  font-weight: 800;
+  letter-spacing: -1px;
+  color: var(--primary-dark);
+  line-height: 1;
+  margin-bottom: 1.25rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.hero__wordmark-usa {
+  font-size: 1.1rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: var(--accent);
+  background: rgba(255,255,255,0.85);
+  padding: 0.35rem 0.65rem;
+  border-radius: 4px;
+  line-height: 1;
+  align-self: center;
+}
+
 .hero__label {
   display: inline-flex;
   align-items: center;
@@ -787,9 +811,15 @@ p {
 }
 
 .footer__desc {
-  font-size: 0.9rem;
-  line-height: 1.6;
-  color: rgba(255,255,255,0.6);
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: rgba(255,255,255,0.9);
+  font-weight: 700;
+  margin: 0;
+}
+
+.footer__desc span {
+  display: block;
 }
 
 .footer h4 {
@@ -824,8 +854,36 @@ p {
   border-top: 1px solid rgba(255,255,255,0.1);
   padding-top: 2rem;
   text-align: center;
-  font-size: 0.85rem;
-  color: rgba(255,255,255,0.4);
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: rgba(255,255,255,0.85);
+}
+
+.footer__bottom a {
+  color: rgba(255,255,255,0.85);
+  text-decoration: underline;
+}
+
+/* === WORLD MAP === */
+.world-map {
+  max-width: 900px;
+  margin: 3rem auto 0;
+  padding: 1rem;
+}
+
+.world-map__svg {
+  width: 100%;
+  height: auto;
+  display: block;
+  transform: perspective(1200px) rotateY(-35deg) scale(0.9);
+  opacity: 0;
+  transition: transform 1.8s cubic-bezier(0.22, 1, 0.36, 1), opacity 1.4s ease-out;
+  will-change: transform, opacity;
+}
+
+.world-map.visible .world-map__svg {
+  transform: perspective(1200px) rotateY(0) scale(1);
+  opacity: 1;
 }
 
 /* === FORM === */
@@ -965,6 +1023,16 @@ p {
 
   .hero h1 {
     font-size: 2.25rem;
+  }
+
+  .hero__wordmark {
+    font-size: 2.4rem;
+    margin-bottom: 1rem;
+  }
+
+  .hero__wordmark-usa {
+    font-size: 0.85rem;
+    padding: 0.3rem 0.5rem;
   }
 
   .hero__stats {
