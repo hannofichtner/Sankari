@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy — IntraAct USA</title>
+  <meta name="description" content="Privacy policy for IntraAct USA, an evidence-based literacy system.">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css?v=19">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="nav">
+    <div class="nav__inner">
+      <a href="index.html" class="nav__logo">IntraAct<span class="nav__logo-usa">USA</span></a>
+      <ul class="nav__links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="method.html">How It Works</a></li>
+        <li><a href="results.html">Results</a></li>
+        <li><a href="implementation.html">Implementation</a></li>
+        <li><a href="research.html">Research</a></li>
+        <li><a href="team.html">Team</a></li>
+        <li><a href="contact.html" class="nav__cta">Partner With Us</a></li>
+      </ul>
+      <button class="nav__toggle" id="navToggle" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Page Hero -->
+  <section class="page-hero">
+    <div class="container">
+      <h1>Privacy Policy</h1>
+      <p>Last updated: April 29, 2026</p>
+    </div>
+  </section>
+
+  <!-- Content -->
+  <section class="section">
+    <div class="container" style="max-width:800px;">
+      <div class="animate" style="font-size:1.05rem;line-height:1.8;color:var(--text);">
+        <h2 style="margin-top:0;">Overview</h2>
+        <p>IntraAct USA respects your privacy and is committed to protecting any personal information you share with us. This Privacy Policy explains what information we collect, how we use it, and the choices you have.</p>
+
+        <h2>Information We Collect</h2>
+        <p>We collect information you provide directly when you contact us through our partnership form, request information about our literacy method, or correspond with us via email. This may include your name, email address, organization, role, and any messages you send.</p>
+
+        <h2>How We Use Your Information</h2>
+        <p>We use the information you provide to respond to inquiries, share information about IntraAct USA, evaluate partnership opportunities, and communicate about pilots and implementations. We do not sell your information to third parties.</p>
+
+        <h2>Children&rsquo;s Data</h2>
+        <p>IntraAct USA does not collect personally identifiable information from students through this website. Student data collected during program implementation is governed by separate agreements with partner schools and districts and complies with applicable U.S. student privacy laws (FERPA, COPPA, and state-level requirements).</p>
+
+        <h2>Cookies &amp; Analytics</h2>
+        <p>This website may use basic analytics to understand traffic and improve content. We do not use these tools to track individual users across other websites.</p>
+
+        <h2>Data Retention &amp; Security</h2>
+        <p>We retain inquiry information only as long as necessary to respond and follow up on partnership conversations. Reasonable safeguards are used to protect your information.</p>
+
+        <h2>Your Rights</h2>
+        <p>You may request access to, correction of, or deletion of personal information you have shared with us by contacting <a href="mailto:info@IntraActUsa.com">info@IntraActUsa.com</a>.</p>
+
+        <h2>Updates to This Policy</h2>
+        <p>We may update this policy from time to time. Material changes will be reflected on this page with a revised &ldquo;Last updated&rdquo; date.</p>
+
+        <h2>Contact</h2>
+        <p>Questions about this policy can be sent to <a href="mailto:info@IntraActUsa.com">info@IntraActUsa.com</a>.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div>
+          <div class="footer__brand">IntraAct<span class="nav__logo-usa" style="font-size:0.6rem;">USA</span></div>
+          <p class="footer__desc"><span>Part of the IntInt global Network</span><span>&amp; In Partnership with Sankari</span></p>
+        </div>
+        <div>
+          <h4>Method</h4>
+          <ul>
+            <li><a href="method.html">How It Works</a></li>
+            <li><a href="research.html">Research</a></li>
+            <li><a href="results.html">Results</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>For Schools</h4>
+          <ul>
+            <li><a href="implementation.html">Implementation</a></li>
+            <li><a href="team.html">Team</a></li>
+            <li><a href="contact.html">Partner With Us</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Legal</h4>
+          <ul>
+            <li><a href="privacy.html">Privacy Policy</a></li>
+            <li><a href="terms.html">Terms of Use</a></li>
+            <li><a href="mailto:info@IntraActUsa.com">info@IntraActUsa.com</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p>&copy; 2026 IntraAct USA &nbsp;|&nbsp; Part of the <a href="https://www.intint.org">IntInt</a> global network</p>
+        <p style="margin-top:0.5rem;">Powered by Sankari</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('navToggle').addEventListener('click', function() {
+      document.getElementById('navLinks').classList.toggle('active');
+    });
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('visible'); });
+    }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+    document.querySelectorAll('.animate').forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>
