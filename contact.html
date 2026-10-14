@@ -103,7 +103,7 @@
 
         <div class="animate delay-2">
           <div class="card" style="padding: 2.5rem;">
-            <form class="form" action="https://formspree.io/f/placeholder" method="POST">
+            <form class="form" id="contact-form">
               <div class="form__row">
                 <div class="form__group">
                   <label for="firstName">First Name</label>
@@ -150,7 +150,30 @@
                 <textarea id="message" name="message" placeholder="Tell us about your literacy goals and how we can help..."></textarea>
               </div>
               <button type="submit" class="btn btn--primary" style="width: 100%; justify-content: center;">Send Inquiry</button>
+              <p id="contact-form-hint" style="display:none; margin-top:1rem; text-align:center; color:var(--text-light);">Your email app should now open with your inquiry - just press Send there. If it did not open, please email us directly at <a href="mailto:info@intraactusa.com" style="color:var(--accent);">info@intraactusa.com</a>.</p>
             </form>
+            <script>
+              document.getElementById('contact-form').addEventListener('submit', function (e) {
+                e.preventDefault();
+                var v = function (id) { return (document.getElementById(id).value || '').trim(); };
+                var roleEl = document.getElementById('role');
+                var interestEl = document.getElementById('interest');
+                var label = function (sel) { return sel.selectedIndex > 0 ? sel.options[sel.selectedIndex].text : '-'; };
+                var name = v('firstName') + ' ' + v('lastName');
+                var body = [
+                  'Name: ' + name,
+                  'Email: ' + v('email'),
+                  'Organization / School: ' + (v('organization') || '-'),
+                  'Role: ' + label(roleEl),
+                  'Area of Interest: ' + label(interestEl),
+                  '',
+                  v('message')
+                ].join('\r\n');
+                var subject = 'Pilot inquiry from ' + name;
+                window.location.href = 'mailto:info@intraactusa.com?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
+                document.getElementById('contact-form-hint').style.display = 'block';
+              });
+            </script>
           </div>
         </div>
       </div>
